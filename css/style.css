@@ -104,10 +104,6 @@ body {
   transform: translate(-50%, -50%) scale(0.8);
   transition: transform 1s; }
 
-.solar_system-focus {
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 3s; }
-
 .sun_space {
   transition: 1.5s; }
   .sun_space .sun_wrap .sun {
@@ -397,15 +393,13 @@ body {
         width: 200%;
         height: 130%;
         background-image: url(../img/maps/saturn_ring.png);
-        background-repeat: repeat;
-        background-position: center;
-        background-size: 250%;
         background-repeat: no-repeat;
+        background-position: center;
         background-size: 99%;
         filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.9)) blur(0.6px);
-        transform: rotate(-35deg) !important;
         opacity: 0.4;
-        border-radius: 0% !important; }
+        transform: rotate(35deg);
+        border-radius: 0%; }
       .saturn_space .saturn_orbit .saturn_wrap .saturn:after {
         transform: rotate(-27deg); }
 
@@ -581,6 +575,10 @@ body {
   color: rgba(255, 255, 255, 0.6); }
   .expand_more:hover {
     color: rgba(38, 110, 246, 0.5) !important; }
+
+.solar_system-focus {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 3s; }
 
 .planet-orbit-focus {
   width: 300px !important;
