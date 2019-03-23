@@ -46,7 +46,6 @@ body {
     border-radius: $circle;
     cursor: pointer;
     transition: $planet-focus-out-transition;
-    // transform: $axis-tilt;
 }
 
 // PLANET:BEFORE
@@ -64,7 +63,6 @@ body {
     box-shadow: $planet-shadow;
     border-radius: $circle;
     transition: $planet-shadow-focus-out-transition;
-    // transform: $shadow-tilt;
 }
 
 //PLANET FOCUS
@@ -105,11 +103,6 @@ body {
     transition: $solar_system-focus-out-transition;
 }
 
-.solar_system-focus {
-    transform: translate(-50%, -50%) scale(1);
-    transition: $solar_system-focus-in-transition;
-}
-
 // SUN
 .sun_space {
     transition: $orbit-focus-out;
@@ -131,7 +124,7 @@ body {
                 @include animation-properties-2(map-spin, linear, infinite, $sun-flares-duration, sun_flares-pulse, ease-in-out, infinite, $sun-pulse-duration);
                 @include background-properties-planet(url(../img/maps/atmosphere.png));
                 border-radius: $circle;
-                opacity: 0.4;
+                opacity: $sun-flares-opacity;
             }
 
             &:after {
@@ -152,7 +145,7 @@ body {
     &:after {
         @include before-after();
         @include size(100%);
-        border-radius: 50%;
+        border-radius: $circle;
         box-shadow: $sun-shine-after;
         transition: $planet-shadow-focus-out-transition;
     }
@@ -177,18 +170,18 @@ body {
                 @include size($mercury-size);
                 @include background-properties-planet(url(../img/maps/mercury.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $mercury-map-duration);
-                transform: $mercury-axis-tilt;
+                transform: rotate($mercury-axis-tilt);
 
                 &:before {
                     @include size($planet-atmosphere-size);
                     @include background-properties-planet(url(../img/maps/atmosphere_2.png));
                     @include animation-properties-1(map-spin, linear, infinite, $mercury-atmosphere-duration);
                     border-radius: $circle;
-                    opacity: 1;
+                    opacity: $mercury-atmosphere-opacity;
                 }
 
                 &:after {
-                    transform: $mercury-shadow-tilt;
+                    transform: rotate($mercury-shadow-tilt);
                 }
             }
         }
@@ -220,16 +213,16 @@ body {
                 @include size($venus-size);
                 @include background-properties-planet(url(../img/maps/venus.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $venus-map-duration);
-                transform: $venus-axis-tilt;
+                transform: rotate($venus-axis-tilt);
 
                 &:before {
                     @include background-properties-planet(url(../img/maps/atmosphere.png));
                     @include animation-properties-1(map-spin, linear, infinite, $venus-atmosphere-duration);
-                    opacity: 0.8;
+                    opacity: $venus-atmosphere-opacity;
                 }
 
                 &:after {
-                    transform: $venus-shadow-tilt;
+                    transform: rotate($venus-shadow-tilt);
                 }
             }
         }
@@ -260,16 +253,16 @@ body {
                 @include size($earth-size);
                 @include background-properties-planet(url(../img/maps/earth.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $earth-map-duration);
-                transform: $earth-axis-tilt;
+                transform: rotate($earth-axis-tilt);
 
                 &:before {
                     @include background-properties-planet(url(../img/maps/earth_clouds.png));
                     @include animation-properties-1(map-spin, linear, infinite, $earth-atmosphere-duration);
-                    opacity: 0.8;
+                    opacity: $earth-atmosphere-opacity;
                 }
 
                 &:after {
-                    transform: $earth-shadow-tilt;
+                    transform: rotate($earth-shadow-tilt);
                 }
             }
         }
@@ -300,16 +293,16 @@ body {
                 @include size($mars-size);
                 @include background-properties-planet(url(../img/maps/mars.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $mars-map-duration);
-                transform: $mars-axis-tilt;
+                transform: rotate($mars-axis-tilt);
 
                 &:before {
                     @include background-properties-planet(url(../img/maps/atmosphere_3.png));
                     @include animation-properties-1(map-spin, linear, infinite, $mars-atmosphere-duration);
-                    opacity: 0.6;
+                    opacity: $mars-atmosphere-opacity;
                 }
 
                 &:after {
-                    transform: $mars-shadow-tilt;
+                    transform: rotate($mars-shadow-tilt);
                 }
             }
         }
@@ -340,16 +333,16 @@ body {
                 @include size($jupiter-size);
                 @include background-properties-planet(url(../img/maps/jupiter.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $jupiter-map-duration);
-                transform: $jupiter-axis-tilt;
+                transform: rotate($jupiter-axis-tilt);
 
                 &:before {
                     @include background-properties-planet(url(../img/maps/atmosphere_3.png));
                     @include animation-properties-1(map-spin, linear, infinite, $jupiter-atmosphere-duration);
-                    opacity: 1;
+                    opacity: $jupiter-atmosphere-opacity;
                 }
 
                 &:after {
-                    transform: $jupiter-shadow-tilt;
+                    transform: rotate($jupiter-shadow-tilt);
                 }
             }
         }
@@ -380,22 +373,20 @@ body {
                 @include size($saturn-size);
                 @include background-properties-planet(url(../img/maps/saturn.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $saturn-map-duration);
-                transform: $saturn-axis-tilt;
+                transform: rotate($saturn-axis-tilt);
 
                 &:before {
                     width: 200%;
                     height: 130%;
-                    @include background-properties-planet(url(../img/maps/saturn_ring.png));
-                    background-repeat: no-repeat;
-                    background-size: $planet-atmosphere-size;
-                    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.9)) blur(0.6px);
-                    transform: rotate(-35deg) !important;
-                    opacity: 0.4;
-                    border-radius: 0% !important;
+                    @include background-properties-saturn-ring(url(../img/maps/saturn_ring.png));
+                    filter: $saturn-ring-shadow;
+                    opacity: $saturn-ring-opacity;
+                    transform: rotate($saturn-ring-tilt);
+                    border-radius: 0%;
                 }
 
                 &:after {
-                    transform: $saturn-shadow-tilt;
+                    transform: rotate($saturn-shadow-tilt);
                 }
             }
         }
@@ -426,16 +417,16 @@ body {
                 @include size($uranus-size);
                 @include background-properties-planet(url(../img/maps/uranus.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $uranus-map-duration);
-                transform: $uranus-axis-tilt;
+                transform: rotate($uranus-axis-tilt);
 
                 &:before {
                     @include background-properties-planet(url(../img/maps/atmosphere_3.png));
                     @include animation-properties-1(map-spin, linear, infinite, $uranus-atmosphere-duration);
-                    opacity: 0.4;
+                    opacity: $uranus-atmosphere-opacity;
                 }
 
                 &:after {
-                    transform: $uranus-shadow-tilt;
+                    transform: rotate($uranus-shadow-tilt);
                 }
             }
         }
@@ -466,16 +457,16 @@ body {
                 @include size($neptune-size);
                 @include background-properties-planet(url(../img/maps/neptune.jpg));
                 @include animation-properties-1(map-spin, linear, infinite, $neptune-map-duration);
-                transform: $neptune-axis-tilt;
+                transform: rotate($neptune-axis-tilt);
 
                 &:before {
                     @include background-properties-planet(url(../img/maps/atmosphere_3.png));
                     @include animation-properties-1(map-spin, linear, infinite, $neptune-atmosphere-duration);
-                    opacity: 0.3;
+                    opacity: $neptune-atmosphere-opacity;
                 }
 
                 &:after {
-                    transform: $neptune-shadow-tilt;
+                    transform: rotate($neptune-shadow-tilt);
                 }
             }
         }

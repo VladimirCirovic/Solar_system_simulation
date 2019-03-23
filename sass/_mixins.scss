@@ -48,6 +48,13 @@
     background-size: 250%;
 }
 
+@mixin background-properties-saturn-ring($image-path) {
+    background-image: $image-path;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 99%;
+}
+
 @mixin background-properties-sun($image-path) {
     background-image: $image-path;
     background-repeat: repeat;
@@ -100,4 +107,9 @@
 @mixin before-after {
     content: '';
     position: absolute;
+}
+
+@mixin position-in {
+    transform: scale(1) translateX(0) translateZ(0);
+    opacity: 1;
 }

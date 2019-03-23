@@ -582,74 +582,6 @@ body {
   .expand_more:hover {
     color: rgba(38, 110, 246, 0.5) !important; }
 
-.animation_overlay-on {
-  height: 100vh;
-  z-index: 20; }
-
-.orbit-start {
-  animation-play-state: running; }
-
-.orbit-stop {
-  animation-play-state: paused; }
-
-.orbit-reset {
-  animation-name: none !important; }
-
-.pause:before {
-  content: '\f28b' !important; }
-
-.lines_off:before {
-  content: '\f111' !important; }
-
-.button-out {
-  transform: translateX(-100%);
-  opacity: 0;
-  z-index: -1;
-  transition: .8s, opacity 1s; }
-
-.orbit-line-off {
-  opacity: 0;
-  transition: opacity 1s; }
-
-.orbit-line_wrap-out {
-  transform: rotateX(90deg) scaleX(20) translateZ(0);
-  opacity: 0;
-  transition: transform 6s, opacity 2s; }
-
-.all_cards-in {
-  opacity: 1;
-  transform: translate(0%);
-  transition: opacity 1s, transform 1s; }
-
-.planet_card-in {
-  height: auto;
-  max-height: 1000px;
-  background: linear-gradient(to bottom, rgba(38, 110, 246, 0.5) 0%, rgba(38, 110, 246, 0) 100%);
-  transition: max-height 1.6s ease-in-out, height 1.6s ease-in-out !important; }
-
-.planet_card_p-in {
-  opacity: 1 !important;
-  transition: 2.6s !important; }
-
-.card_sun-in, .card_mercury-in, .card_venus-in, .card_earth-in, .card_mars-in, .card_jupiter-in, .card_saturn-in, .card_uranus-in, .card_neptune-in {
-  opacity: 1;
-  z-index: 1;
-  transition: .4s; }
-
-.space_map-move {
-  background-size: 3072px 1536px;
-  background-repeat: repeat;
-  transition: background-size 4s, background-position 3s;
-  animation-name: space-move;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 40s; }
-
-.space_map-still {
-  background-size: 3072px 1536px;
-  background-repeat: repeat;
-  transition: background-size 4s, background-position 3s; }
-
 .planet-orbit-focus {
   width: 300px !important;
   height: 300px !important;
@@ -759,6 +691,74 @@ body {
 
 .neptune-in {
   transition: 1.9s; }
+
+.animation_overlay-on {
+  height: 100vh;
+  z-index: 20; }
+
+.orbit-start {
+  animation-play-state: running; }
+
+.orbit-stop {
+  animation-play-state: paused; }
+
+.orbit-reset {
+  animation-name: none !important; }
+
+.pause:before {
+  content: '\f28b' !important; }
+
+.lines_off:before {
+  content: '\f111' !important; }
+
+.button-out {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+  transition: .8s, opacity 1s; }
+
+.orbit-line-off {
+  opacity: 0;
+  transition: opacity 1s; }
+
+.orbit-line_wrap-out {
+  transform: rotateX(90deg) scaleX(20) translateZ(0);
+  opacity: 0;
+  transition: transform 6s, opacity 2s; }
+
+.all_cards-in {
+  opacity: 1;
+  transform: translate(0%);
+  transition: opacity 1s, transform 1s; }
+
+.planet_card-in {
+  height: auto;
+  max-height: 1000px;
+  background: linear-gradient(to bottom, rgba(38, 110, 246, 0.5) 0%, rgba(38, 110, 246, 0) 100%);
+  transition: max-height 1.6s ease-in-out, height 1.6s ease-in-out !important; }
+
+.planet_card_p-in {
+  opacity: 1 !important;
+  transition: 2.6s !important; }
+
+.card_sun-in, .card_mercury-in, .card_venus-in, .card_earth-in, .card_mars-in, .card_jupiter-in, .card_saturn-in, .card_uranus-in, .card_neptune-in {
+  opacity: 1;
+  z-index: 1;
+  transition: .4s; }
+
+.space_map-move {
+  background-size: 3072px 1536px;
+  background-repeat: repeat;
+  transition: background-size 4s, background-position 3s;
+  animation-name: space-move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 40s; }
+
+.space_map-still {
+  background-size: 3072px 1536px;
+  background-repeat: repeat;
+  transition: background-size 4s, background-position 3s; }
 
 @keyframes orbit-spin {
   from {

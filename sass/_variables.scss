@@ -1,11 +1,10 @@
-// ORBIT, PLANET and FOCUS SIZE
-
 // SUN
 $sun-size: 140px;
 $sun-pulse-duration: 4s;
 $sun-spin-duration: 120s;
 $sun-map-duration: 220s;
 $sun-flares-duration: 210s;
+$sun-flares-opacity: 0.4;
 
 // MERCURY
 $mercury-orbit-size: 210px;
@@ -13,8 +12,9 @@ $mercury-size: 22px;
 $mercury-orbit-duration: 5s;
 $mercury-map-duration: 20s;
 $mercury-atmosphere-duration: 15s;
-$mercury-axis-tilt: rotate(1deg);
-$mercury-shadow-tilt: rotate(-1deg);
+$mercury-axis-tilt: 1deg;
+$mercury-shadow-tilt: -$mercury-axis-tilt;
+$mercury-atmosphere-opacity: 1;
 
 // VENUS
 $venus-orbit-size: 310px;
@@ -22,8 +22,9 @@ $venus-size: 34px;
 $venus-orbit-duration: 7s;
 $venus-map-duration: 20s;
 $venus-atmosphere-duration: 15s;
-$venus-axis-tilt: rotate(177deg);
-$venus-shadow-tilt: rotate(-177deg);
+$venus-axis-tilt: 177deg;
+$venus-shadow-tilt: -$venus-axis-tilt;
+$venus-atmosphere-opacity: 0.8;
 
 // EARTH
 $earth-orbit-size: 410px;
@@ -31,8 +32,9 @@ $earth-size: 38px;
 $earth-orbit-duration: 8s;
 $earth-map-duration: 50s;
 $earth-atmosphere-duration: 40s;
-$earth-axis-tilt: rotate(23deg);
-$earth-shadow-tilt: rotate(-23deg);
+$earth-axis-tilt: 23deg;
+$earth-shadow-tilt: -$earth-axis-tilt;
+$earth-atmosphere-opacity: 0.8;
 
 // MARS
 $mars-orbit-size: 520px;
@@ -40,8 +42,9 @@ $mars-size: 32px;
 $mars-orbit-duration: 10s;
 $mars-map-duration: 40s;
 $mars-atmosphere-duration: 30s;
-$mars-axis-tilt: rotate(25deg);
-$mars-shadow-tilt: rotate(-25deg);
+$mars-axis-tilt: 25deg;
+$mars-shadow-tilt: -$mars-axis-tilt;
+$mars-atmosphere-opacity: 0.6;
 
 // JUPITER
 $jupiter-orbit-size: 700px;
@@ -49,16 +52,19 @@ $jupiter-size: 62px;
 $jupiter-orbit-duration: 12s;
 $jupiter-map-duration: 40s;
 $jupiter-atmosphere-duration: 35s;
-$jupiter-axis-tilt: rotate(3deg);
-$jupiter-shadow-tilt: rotate(-3deg);
+$jupiter-axis-tilt: 3deg;
+$jupiter-shadow-tilt: -$jupiter-axis-tilt;
+$jupiter-atmosphere-opacity: 1;
 
 // SATURN
 $saturn-orbit-size: 850px;
 $saturn-size: 54px;
 $saturn-orbit-duration: 14s;
 $saturn-map-duration: 20s;
-$saturn-axis-tilt: rotate(27deg);
-$saturn-shadow-tilt: rotate(-27deg);
+$saturn-axis-tilt: 27deg;
+$saturn-shadow-tilt: -$saturn-axis-tilt;
+$saturn-ring-opacity: 0.4;
+$saturn-ring-tilt: 35deg;
 
 // URANUS
 $uranus-orbit-size: 1000px;
@@ -66,8 +72,9 @@ $uranus-size: 48px;
 $uranus-orbit-duration: 17s;
 $uranus-map-duration: 20s;
 $uranus-atmosphere-duration: 30s;
-$uranus-axis-tilt: rotate(98deg);
-$uranus-shadow-tilt: rotate(-98deg);
+$uranus-axis-tilt: 98deg;
+$uranus-shadow-tilt: -$uranus-axis-tilt;
+$uranus-atmosphere-opacity: 0.4;
 
 // NEPTUNE
 $neptune-orbit-size: 1120px;
@@ -75,8 +82,9 @@ $neptune-size: 44px;
 $neptune-orbit-duration: 20s;
 $neptune-map-duration: 20s;
 $neptune-atmosphere-duration: 15s;
-$neptune-axis-tilt: rotate(30deg);
-$neptune-shadow-tilt: rotate(-30deg);
+$neptune-axis-tilt: 30deg;
+$neptune-shadow-tilt: -$neptune-axis-tilt;
+$neptune-atmosphere-opacity: 0.3;
 
 // PLANET FOCUS PROPERTIES
 $planet-focus-size: 300px !important;
@@ -100,14 +108,16 @@ $planet-focus-shadow-size: 100.5% !important;
 $sun-shine: 0px 0px 20px 0px rgba(255, 255, 255, 0.9), inset 0px 0px 50px 10px rgba(255, 255, 255, 0.6);
 $sun-shine-after: 0px 0px 30px 0px rgba(255, 255, 255, 0.9), inset 0px 0px 80px 20px rgba(255, 255, 255, 0.8) !important;
 
+$saturn-ring-shadow: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.9)) blur(0.6px);
+
 $planet-shadow: 0px -4px 4px -2px rgba(0, 0, 0, 0.95), inset -2px 16px 14px -4px rgba(0, 0, 0, 0.9), inset 2px -12px 16px -2px rgba(255, 255, 255, 0.4), -1px 6px 8px -5px rgba(255, 255, 255, 0.8);
 $planet-shadow-focus: 0px -20px 20px -5px rgba(0, 0, 0, 0.9), inset -10px 90px 90px -20px rgba(0, 0, 0, 0.96), inset 10px -80px 80px -20px rgba(255, 255, 255, 0.5), -2px 20px 40px -10px rgba(255, 255, 255, 0.5) !important;
 
 $circle: 50%;
 
 //PLANET AXIS TILT
-$axis-tilt: rotate(20deg);
-$shadow-tilt: rotate(-20deg);
+$axis-tilt: 20deg;
+$shadow-tilt: -$axis-tilt;
 
 // BUTTON, LINES AND CARDS COLORS
 $card-color: rgba(38, 110, 246, 0.5);
