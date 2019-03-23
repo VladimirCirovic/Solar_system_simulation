@@ -11,8 +11,8 @@ $(document).ready(function () {
 	var $button = $('.button');
 
 	var $colapse_button = $('.colapse_button');
-	var $play = $('#play');
-	var $lines = $('#lines');
+	var $play = $('.play');
+	var $lines = $('.lines');
 
 	var $mercury_space = $('.mercury_space');
 	var $venus_space = $('.venus_space');
@@ -122,7 +122,7 @@ $(document).ready(function () {
 	});
 
 	// SUN FOCUS TOGGLE
-	$('.sun, .close-button_sun').click(function () {
+	$('#sun, .close-button_sun').click(function () {
 
 		if ($sun.hasClass('sun_focus')) {
 
@@ -142,16 +142,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$mercury_wrap.removeClass('mercury-out-backward').addClass('mercury-in');
-				$venus_wrap.removeClass('venus-out-backward').addClass('venus-in');
-				$earth_wrap.removeClass('earth-out-backward').addClass('earth-in');
-				$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
-				$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
-				$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
-				$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
-				$neptune_wrap.removeClass('neptune-out-backward').addClass('neptune-in');
-			}, 100);
+			$mercury_wrap.removeClass('mercury-out-backward').addClass('mercury-in');
+			$venus_wrap.removeClass('venus-out-backward').addClass('venus-in');
+			$earth_wrap.removeClass('earth-out-backward').addClass('earth-in');
+			$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
+			$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
+			$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
+			$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
+			$neptune_wrap.removeClass('neptune-out-backward').addClass('neptune-in');
 
 		} else {
 
@@ -189,7 +187,7 @@ $(document).ready(function () {
 	})
 
 	// MERCURY FOCUS TOGGLE
-	$('.mercury, .close-button_mercury').click(function () {
+	$('#mercury, .close-button_mercury').click(function () {
 
 		if ($mercury.hasClass('mercury_focus')) {
 
@@ -211,16 +209,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$venus_wrap.removeClass('venus-out-backward').addClass('venus-in');
-				$earth_wrap.removeClass('earth-out-backward').addClass('earth-in');
-				$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
-				$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
-				$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
-				$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
-				$neptune_wrap.removeClass('neptune-out-backward').addClass('neptune-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$venus_wrap.removeClass('venus-out-backward').addClass('venus-in');
+			$earth_wrap.removeClass('earth-out-backward').addClass('earth-in');
+			$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
+			$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
+			$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
+			$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
+			$neptune_wrap.removeClass('neptune-out-backward').addClass('neptune-in');
 
 		} else {
 
@@ -263,7 +259,7 @@ $(document).ready(function () {
 	})
 
 	// VENUS FOCUS TOGGLE
-	$('.venus, .close-button_venus').click(function () {
+	$('#venus, .close-button_venus').click(function () {
 
 		if ($venus.hasClass('venus_focus')) {
 
@@ -285,16 +281,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
-				$earth_wrap.removeClass('earth-out-backward').addClass('earth-in');
-				$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
-				$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
-				$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
-				$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
-				$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
+			$earth_wrap.removeClass('earth-out-backward').addClass('earth-in');
+			$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
+			$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
+			$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
+			$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
+			$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
 
 		} else {
 
@@ -337,7 +331,7 @@ $(document).ready(function () {
 	})
 
 	// EARTH FOCUS TOGGLE
-	$('.earth, .close-button_earth').click(function () {
+	$('#earth, .close-button_earth').click(function () {
 
 		if ($earth.hasClass('earth_focus')) {
 
@@ -359,16 +353,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
-				$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
-				$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
-				$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
-				$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
-				$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
-				$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
+			$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
+			$mars_wrap.removeClass('mars-out-backward').addClass('mars-in');
+			$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
+			$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
+			$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
+			$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
 
 		} else {
 
@@ -411,7 +403,7 @@ $(document).ready(function () {
 	})
 
 	// MARS FOCUS TOGGLE
-	$('.mars, .close-button_mars').click(function () {
+	$('#mars, .close-button_mars').click(function () {
 
 		if ($mars.hasClass('mars_focus')) {
 
@@ -433,16 +425,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
-				$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
-				$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
-				$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
-				$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
-				$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
-				$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
+			$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
+			$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
+			$jupiter_wrap.removeClass('jupiter-out-backward').addClass('jupiter-in');
+			$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
+			$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
+			$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
 
 		} else {
 
@@ -485,7 +475,7 @@ $(document).ready(function () {
 	})
 
 	// JUPITER FOCUS TOGGLE
-	$('.jupiter, .close-button_jupiter').click(function () {
+	$('#jupiter, .close-button_jupiter').click(function () {
 
 		if ($jupiter.hasClass('jupiter_focus')) {
 
@@ -507,16 +497,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
-				$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
-				$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
-				$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
-				$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
-				$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
-				$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
+			$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
+			$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
+			$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
+			$saturn_wrap.removeClass('saturn-out-backward').addClass('saturn-in');
+			$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
+			$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
 
 		} else {
 
@@ -559,7 +547,7 @@ $(document).ready(function () {
 	})
 
 	// SATURN FOCUS TOGGLE
-	$('.saturn, .close-button_saturn').click(function () {
+	$('#saturn, .close-button_saturn').click(function () {
 
 		if ($saturn.hasClass('saturn_focus')) {
 
@@ -581,16 +569,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
-				$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
-				$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
-				$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
-				$jupiter_wrap.removeClass('jupiter-out-forward').addClass('jupiter-in');
-				$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
-				$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
+			$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
+			$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
+			$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
+			$jupiter_wrap.removeClass('jupiter-out-forward').addClass('jupiter-in');
+			$uranus_wrap.removeClass('uranus-out-backward').addClass('uranus-in');
+			$neptune_wrap.removeClass('neptune-out-forward').addClass('neptune-in');
 
 		} else {
 
@@ -633,7 +619,7 @@ $(document).ready(function () {
 	})
 
 	// URANUS FOCUS TOGGLE
-	$('.uranus, .close-button_uranus').click(function () {
+	$('#uranus, .close-button_uranus').click(function () {
 
 		if ($uranus.hasClass('uranus_focus')) {
 
@@ -655,16 +641,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
-				$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
-				$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
-				$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
-				$jupiter_wrap.removeClass('jupiter-out-forward').addClass('jupiter-in');
-				$saturn_wrap.removeClass('saturn-out-forward').addClass('saturn-in');
-				$neptune_wrap.removeClass('neptune-out-backward').addClass('neptune-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
+			$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
+			$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
+			$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
+			$jupiter_wrap.removeClass('jupiter-out-forward').addClass('jupiter-in');
+			$saturn_wrap.removeClass('saturn-out-forward').addClass('saturn-in');
+			$neptune_wrap.removeClass('neptune-out-backward').addClass('neptune-in');
 
 		} else {
 
@@ -707,7 +691,7 @@ $(document).ready(function () {
 	})
 
 	// NEPTUNE FOCUS TOGGLE
-	$('.neptune, .close-button_neptune').click(function () {
+	$('#neptune, .close-button_neptune').click(function () {
 
 		if ($neptune.hasClass('neptune_focus')) {
 
@@ -729,16 +713,14 @@ $(document).ready(function () {
 				$(space).removeClass('planet-space-out-hide');
 			});
 
-			setTimeout(function () {
-				$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
-				$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
-				$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
-				$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
-				$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
-				$jupiter_wrap.removeClass('jupiter-out-forward').addClass('jupiter-in');
-				$saturn_wrap.removeClass('saturn-out-forward').addClass('saturn-in');
-				$uranus_wrap.removeClass('uranus-out-forward').addClass('uranus-in');
-			}, 100);
+			$sun_wrap.removeClass('sun-out-forward').addClass('sun-in');
+			$mercury_wrap.removeClass('mercury-out-forward').addClass('mercury-in');
+			$venus_wrap.removeClass('venus-out-forward').addClass('venus-in');
+			$earth_wrap.removeClass('earth-out-forward').addClass('earth-in');
+			$mars_wrap.removeClass('mars-out-forward').addClass('mars-in');
+			$jupiter_wrap.removeClass('jupiter-out-forward').addClass('jupiter-in');
+			$saturn_wrap.removeClass('saturn-out-forward').addClass('saturn-in');
+			$uranus_wrap.removeClass('uranus-out-forward').addClass('uranus-in');
 
 		} else {
 

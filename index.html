@@ -13,7 +13,7 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
    <!-- STYLE CSS FILE -->
    <link rel="stylesheet" href="css/style.css">
-   <title>Solar System v1.8.96</title>
+   <title>Solar System v1.8.98</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
          <div class="neptune_space">
             <div class="neptune_orbit orbit-stop">
                <div class="neptune_wrap">
-                  <div class="neptune"></div>
+                  <div class="neptune" id="neptune"></div>
                </div>
             </div>
          </div>
@@ -33,7 +33,7 @@
          <div class="uranus_space">
             <div class="uranus_orbit orbit-stop">
                <div class="uranus_wrap">
-                  <div class="uranus"></div>
+                  <div class="uranus" id="uranus"></div>
                </div>
             </div>
          </div>
@@ -41,7 +41,7 @@
          <div class="saturn_space">
             <div class="saturn_orbit orbit-stop">
                <div class="saturn_wrap">
-                  <div class="saturn"></div>
+                  <div class="saturn" id="saturn"></div>
                </div>
             </div>
          </div>
@@ -49,7 +49,7 @@
          <div class="jupiter_space">
             <div class="jupiter_orbit orbit-stop">
                <div class="jupiter_wrap">
-                  <div class="jupiter"></div>
+                  <div class="jupiter" id="jupiter"></div>
                </div>
             </div>
          </div>
@@ -57,7 +57,7 @@
          <div class="mars_space">
             <div class="mars_orbit orbit-stop">
                <div class="mars_wrap">
-                  <div class="mars"></div>
+                  <div class="mars" id="mars"></div>
                </div>
             </div>
          </div>
@@ -65,7 +65,7 @@
          <div class="earth_space">
             <div class="earth_orbit orbit-stop">
                <div class="earth_wrap">
-                  <div class="earth"></div>
+                  <div class="earth" id="earth"></div>
                </div>
             </div>
          </div>
@@ -73,7 +73,7 @@
          <div class="venus_space">
             <div class="venus_orbit orbit-stop">
                <div class="venus_wrap">
-                  <div class="venus"></div>
+                  <div class="venus" id="venus"></div>
                </div>
             </div>
          </div>
@@ -81,14 +81,14 @@
          <div class="mercury_space">
             <div class="mercury_orbit orbit-stop">
                <div class="mercury_wrap">
-                  <div class="mercury"></div>
+                  <div class="mercury" id="mercury"></div>
                </div>
             </div>
          </div>
          <!-- SUN -->
          <div class="sun_space">
             <div class="sun_wrap">
-               <div class="sun"></div>
+               <div class="sun" id="sun"></div>
             </div>
          </div>
          <!-- ORBIT LINES -->
@@ -105,9 +105,9 @@
       </div>
    </div>
    <!-- BUTTONS MENU -->
-   <div class="button orbit-start">START/STOP <i class="fas fa-play-circle menu_button play" id="play"></i></div>
-   <div class="button orbit-line">ORBIT ON/OFF <i class="fas fa-dot-circle menu_button lines_on" id="lines"></i></div>
-   <div class="button reset-all">RESET ALL <i class="fas fa-stop-circle menu_button"></i></div>
+   <div class="button orbit-start">START/STOP <i class="fas fa-play-circle menu_button play"></i></div>
+   <div class="button orbit-line">ORBIT ON/OFF <i class="fas fa-dot-circle menu_button lines_on lines"></i></div>
+   <div class="button reset-all">RESET ALL <i class="fas fa-stop-circle menu_button""></i></div>
    <!-- PLANET CARDS -->
    <div class="all_cards">
       <div class="planet_card card_sun">
@@ -238,7 +238,7 @@
       </div>
    </div>
    <!-- VERSION INDICATOR -->
-   <div style="color: rgba(255, 255, 255, 0.2); font-size: 10px;">v1.8.96</div>
+   <div style="color: rgba(255, 255, 255, 0.2); font-size: 10px;">v1.8.98</div>
 
    <!-- JQUERY AND MAIN JS FILE -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
