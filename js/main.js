@@ -130,6 +130,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_sun.removeClass('card_sun-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -195,6 +196,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_mercury.removeClass('card_mercury-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -267,6 +269,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_venus.removeClass('card_venus-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -339,6 +342,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_earth.removeClass('card_earth-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -411,6 +415,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_mars.removeClass('card_mars-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -483,6 +488,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_jupiter.removeClass('card_jupiter-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -555,6 +561,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_saturn.removeClass('card_saturn-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -627,6 +634,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_uranus.removeClass('card_uranus-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
@@ -699,6 +707,7 @@ $(document).ready(function () {
 			$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 			$all_cards.removeClass('all_cards-in');
 			setTimeout(function () {
+				$colapse_button.removeClass('expand');
 				$card_neptune.removeClass('card_neptune-in');
 				$planet_card.removeClass('planet_card-in');
 				$planet_card_p.removeClass('planet_card_p-in');
