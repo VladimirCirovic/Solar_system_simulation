@@ -52,15 +52,15 @@ $(document).ready(function () {
 	var $uranus = $('.uranus');
 	var $neptune = $('.neptune');
 
-	var $card_sun = $('.card_sun1');
-	var $card_mercury = $('.card_mercury1');
-	var $card_venus = $('.card_venus1');
-	var $card_earth = $('.card_earth1');
-	var $card_mars = $('.card_mars1');
-	var $card_jupiter = $('.card_jupiter1');
-	var $card_saturn = $('.card_saturn1');
-	var $card_uranus = $('.card_uranus1');
-	var $card_neptune = $('.card_neptune1');
+	var $card_sun = $('.card_sun');
+	var $card_mercury = $('.card_mercury');
+	var $card_venus = $('.card_venus');
+	var $card_earth = $('.card_earth');
+	var $card_mars = $('.card_mars');
+	var $card_jupiter = $('.card_jupiter');
+	var $card_saturn = $('.card_saturn');
+	var $card_uranus = $('.card_uranus');
+	var $card_neptune = $('.card_neptune');
 
 	// PLANET ORBIT ROTATION TOGGLE
 	var orbit = ['.mercury_orbit', '.venus_orbit', '.earth_orbit', '.mars_orbit', '.jupiter_orbit', '.saturn_orbit', '.uranus_orbit', '.neptune_orbit'];
