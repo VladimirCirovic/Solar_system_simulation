@@ -766,6 +766,12 @@ body {
   to {
     transform: rotate(360deg) translateZ(0); } }
 
+@keyframes planet-spin {
+  from {
+    transform: rotate(0deg) translateZ(0); }
+  to {
+    transform: rotate(360deg) translateZ(0); } }
+
 @keyframes map-spin {
   from {
     background-position: 0% center; }

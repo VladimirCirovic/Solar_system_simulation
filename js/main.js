@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
 	// VARIABLES
+	var $body = $('body');
 	var $solar_system = $('.solar_system');
+	var $animation_overlay_off = $('.animation_overlay-off');
 	var $orbit_line_wrap = $('.orbit-line_wrap');
 	var $all_cards = $('.all_cards');
 	var $planet_card = $('.planet_card');
 	var $planet_card_p = $planet_card.find('p');
 	var $button = $('.button');
-	var $body = $('body');
-	var $animation_overlay_off = $('.animation_overlay-off');
 
 	var $colapse_button = $('.colapse_button');
 	var $play = $('#play');
@@ -17,7 +17,7 @@ $(document).ready(function () {
 	var $mercury_space = $('.mercury_space');
 	var $venus_space = $('.venus_space');
 	var $earth_space = $('.earth_space');
-	var $mars_space = $('.mars1_space');
+	var $mars_space = $('.mars_space');
 	var $jupiter_space = $('.jupiter_space');
 	var $saturn_space = $('.saturn_space');
 	var $uranus_space = $('.uranus_space');
@@ -26,7 +26,7 @@ $(document).ready(function () {
 	var $mercury_orbit = $('.mercury_orbit');
 	var $venus_orbit = $('.venus_orbit');
 	var $earth_orbit = $('.earth_orbit');
-	var $mars_orbit = $('.mars1_orbit');
+	var $mars_orbit = $('.mars_orbit');
 	var $jupiter_orbit = $('.jupiter_orbit');
 	var $saturn_orbit = $('.saturn_orbit');
 	var $uranus_orbit = $('.uranus_orbit');
@@ -104,7 +104,7 @@ $(document).ready(function () {
 
 				$(planet).removeClass('orbit-start');
 				$(planet).addClass('orbit-stop');
-				$('.animation_overlay').removeClass('animation_overlay-on');
+				$('.animation_overlay, .animation_overlay-off').removeClass('animation_overlay-on');
 				$(planet).addClass('orbit-reset');
 				setTimeout(function () {
 					$(planet).removeClass('orbit-reset');
@@ -112,7 +112,7 @@ $(document).ready(function () {
 
 			} else if ($(planet).hasClass('orbit-stop')) {
 
-				$('.animation_overlay').removeClass('animation_overlay-on');
+				$('.animation_overlay, .animation_overlay-off').removeClass('animation_overlay-on');
 				$(planet).addClass('orbit-reset');
 				setTimeout(function () {
 					$(planet).removeClass('orbit-reset');
@@ -315,7 +315,7 @@ $(document).ready(function () {
 			setTimeout(function () {
 				$venus_space.addClass('planet-space-front');
 			}, 2000);
-			$vrnus_orbit.addClass('planet-orbit-focus');
+			$venus_orbit.addClass('planet-orbit-focus');
 			$venus.addClass('venus_focus');
 
 			$sun_wrap.removeClass('sun-in').addClass('sun-out-forward');
