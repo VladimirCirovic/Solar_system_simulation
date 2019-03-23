@@ -596,71 +596,71 @@ body {
   opacity: 0; }
 
 .mercury-out-backward {
-  transform: scale(0.6) translateX(-1000%) translateZ(0);
+  transform: scale(0.6) translateX(-1000%);
   transition: transform 6s, opacity 7s; }
 
 .venus-out-backward {
-  transform: scale(0.4) translateX(-800%) translateZ(0);
+  transform: scale(0.4) translateX(-800%);
   transition: transform 5s, opacity 5s; }
 
 .earth-out-backward {
-  transform: scale(0.3) translateX(-900%) translateZ(0);
+  transform: scale(0.3) translateX(-900%);
   transition: transform 4.5s, opacity 5s; }
 
 .mars-out-backward {
-  transform: scale(0.3) translateX(-1100%) translateZ(0);
+  transform: scale(0.3) translateX(-1100%);
   transition: transform 4s, opacity 5s; }
 
 .jupiter-out-backward {
-  transform: scale(0.2) translateX(-600%) translateZ(0);
+  transform: scale(0.2) translateX(-600%);
   transition: transform 3.5s, opacity 4s; }
 
 .saturn-out-backward {
-  transform: scale(0.1) translateX(-800%) translateZ(0);
+  transform: scale(0.1) translateX(-800%);
   transition: transform 3s, opacity 4s; }
 
 .uranus-out-backward {
-  transform: scale(0.1) translateX(-800%) translateZ(0);
+  transform: scale(0.1) translateX(-800%);
   transition: transform 2.5s, opacity 3s; }
 
 .neptune-out-backward {
-  transform: scale(0.1) translateX(-800%) translateZ(0);
+  transform: scale(0.1) translateX(-800%);
   transition: transform 2s, opacity 3s; }
 
 .sun-out-forward {
-  transform: scale(20) translateX(-300%) translateZ(0);
+  transform: scale(20) translateX(-300%);
   transition: 1s; }
 
 .mercury-out-forward {
-  transform: scale(40) translateX(-300%) translateZ(0);
+  transform: scale(40) translateX(-300%);
   transition: transform .6s, opacity 2s; }
 
 .venus-out-forward {
-  transform: scale(30) translateX(-500%) translateZ(0);
+  transform: scale(30) translateX(-500%);
   transition: transform .8s, opacity 4s; }
 
 .earth-out-forward {
-  transform: scale(30) translateX(-500%) translateZ(0);
+  transform: scale(30) translateX(-500%);
   transition: transform 1.5s, opacity 4s; }
 
 .mars-out-forward {
-  transform: scale(20) translateX(-400%) translateZ(0);
+  transform: scale(20) translateX(-400%);
   transition: transform 1.5s, opacity 8s; }
 
 .jupiter-out-forward {
-  transform: scale(15) translateX(-600%) translateZ(0);
+  transform: scale(15) translateX(-600%);
   transition: transform 3s, opacity 6s; }
 
 .saturn-out-forward {
-  transform: scale(15) translateX(-600%) translateZ(0);
+  transform: scale(15) translateX(-600%);
   transition: transform 5s, opacity 8s; }
 
 .uranus-out-forward {
-  transform: scale(10) translateX(-500%) translateZ(0);
+  transform: scale(10) translateX(-500%);
   transition: transform 7s, opacity 9s; }
 
 .sun-in, .mercury-in, .venus-in, .earth-in, .mars-in, .jupiter-in, .saturn-in, .uranus-in, .neptune-in {
-  transform: scale(1) translateX(0) translateZ(0);
+  transform: scale(1) translateX(0);
   opacity: 1; }
 
 .sun-in {
@@ -720,7 +720,7 @@ body {
   transition: opacity 1s; }
 
 .orbit-line_wrap-out {
-  transform: rotateX(90deg) scaleX(20) translateZ(0);
+  transform: rotateX(90deg) scaleX(20);
   opacity: 0;
   transition: transform 6s, opacity 2s; }
 
@@ -760,15 +760,15 @@ body {
 
 @keyframes orbit-spin {
   from {
-    transform: rotate(0deg) translateZ(0); }
+    transform: rotate(0deg); }
   to {
-    transform: rotate(360deg) translateZ(0); } }
+    transform: rotate(360deg); } }
 
 @keyframes planet-spin {
   from {
-    transform: rotate(0deg) translateZ(0); }
+    transform: rotate(0deg); }
   to {
-    transform: rotate(360deg) translateZ(0); } }
+    transform: rotate(360deg); } }
 
 @keyframes map-spin {
   from {
