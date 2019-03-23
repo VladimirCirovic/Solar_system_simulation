@@ -227,7 +227,7 @@
 
 // ANIMATION SPACE MOVE / STILL
 .space_map-move {
-    background-size: 3072px 1536px;
+    background-size: 4096px 2048px;
     background-repeat: repeat;
     transition: background-size 4s, background-position 3s;
     @include animation-properties-1(space-move, linear, infinite, 40s);

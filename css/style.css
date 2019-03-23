@@ -1,7 +1,6 @@
 body {
   background-image: url(../img/maps/milkyway.jpg);
   background-size: 2048px 1024px;
-  background-position: center bottom;
   overflow-x: hidden;
   font-family: monospace;
   letter-spacing: 0.5px;
@@ -745,7 +744,7 @@ body {
   transition: .4s; }
 
 .space_map-move {
-  background-size: 3072px 1536px;
+  background-size: 4096px 2048px;
   background-repeat: repeat;
   transition: background-size 4s, background-position 3s;
   animation-name: space-move;
@@ -802,10 +801,9 @@ body {
     box-shadow: 0px 0px 16px 0px rgba(255, 255, 255, 0), inset 0px 0px 40px 6px rgba(255, 255, 255, 0); } }
 
 @keyframes space-move {
-  from {
-    background-position: center bottom; }
+  from { }
   to {
-    background-position: 2048px bottom; } }
+    background-position: 4096px 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

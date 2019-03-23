@@ -71,10 +71,10 @@
 
 @keyframes space-move {
     from {
-        background-position: center bottom;
+        // background-position: center bottom;
     }
 
     to {
-        background-position: 2048px bottom;
+        background-position: 4096px 0;
     }
 }
