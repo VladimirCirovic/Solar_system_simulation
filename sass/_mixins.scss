@@ -1,0 +1,103 @@
+@mixin flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center-x {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin absolute-center-all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-x {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+@mixin absolute-0 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+@mixin background-properties-planet($image-path) {
+    background-image: $image-path;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 250%;
+}
+
+@mixin background-properties-sun($image-path) {
+    background-image: $image-path;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 220%;
+}
+
+@mixin animation-properties-1($name, $timing, $iteration, $duration) {
+    animation-name: $name;
+    animation-timing-function: $timing;
+    animation-iteration-count: $iteration;
+    animation-duration: $duration;
+}
+
+@mixin animation-properties-2($name1, $timing1, $iteration1, $duration1, $name2, $timing2, $iteration2, $duration2) {
+    animation-name: $name1, $name2;
+    animation-timing-function: $timing1, $timing2;
+    animation-iteration-count: $iteration1, $iteration2;
+    animation-duration: $duration1, $duration2;
+}
+
+@mixin animation-properties-3($name1, $timing1, $iteration1, $duration1, $name2, $timing2, $iteration2, $duration2, $name3, $timing3, $iteration3, $duration3) {
+    animation-name: $name1, $name2, $name3;
+    animation-timing-function: $timing1, $timing2, $timing3;
+    animation-iteration-count: $iteration1, $iteration2, $iteration3;
+    animation-duration: $duration1, $duration2, $duration3;
+}
+
+@mixin planet-shine {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -30px 100px;
+}
+
+@mixin size($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin wrap-size($size) {
+    height: $size;
+}
+
+@mixin position($position) {
+    top: $position;
+    left: $position;
+}
+
+@mixin before-after {
+    content: '';
+    position: absolute;
+}

@@ -1,0 +1,631 @@
+body {
+    background-image: url(../img/maps/milkyway.jpg);
+    background-size: 2048px 1024px;
+    background-position: center bottom;
+    overflow-x: hidden;
+    font-family: monospace;
+    letter-spacing: 0.5px;
+    transition: background-size 2s, background-position 3s;
+    overflow: hidden;
+}
+
+// IMPORTS
+@import 'mixins';
+@import 'variables';
+
+.animation_overlay-off {
+    @include absolute-0();
+    width: 100%;
+    height: 0vh;
+    z-index: 0;
+}
+
+// PLANET SPACE
+#{$planet-space-all} {
+    @include absolute-center-all();
+    @include flex-center-all();
+    border-radius: $circle;
+}
+
+// PLANET ORBIT
+#{$planet-orbit-all} {
+    @include flex-center-x();
+    border-radius: $circle;
+    transition: $orbit-focus-out;
+}
+
+// PLANET WRAP
+#{$planet-wrap-all} {
+    @include flex-center-x();
+}
+
+// PLANET
+#{$planet-all} {
+    position: relative;
+    @include flex-center-all();
+    border-radius: $circle;
+    cursor: pointer;
+    transition: $planet-focus-out-transition;
+    // transform: $axis-tilt;
+}
+
+// PLANET:BEFORE
+#{$planet-before-all} {
+    @include before-after();
+    @include size($planet-atmosphere-size);
+    border-radius: $circle;
+}
+
+//PLANET AFTER
+#{$planet-after-all} {
+    @include before-after();
+    @include size($planet-shadow-size);
+    @include planet-shine();
+    box-shadow: $planet-shadow;
+    border-radius: $circle;
+    transition: $planet-shadow-focus-out-transition;
+    // transform: $shadow-tilt;
+}
+
+//PLANET FOCUS
+#{$planet-focus-all} {
+    @include size($planet-focus-size);
+    transition: $planet-focus-in-transition;
+}
+
+//PLANET FOCUS AFTER
+#{$planet-focus-after-all} {
+    @include size($planet-focus-shadow-size);
+    box-shadow: $planet-shadow-focus;
+    transition: $planet-shadow-focus-in-transition;
+}
+
+#{$orbit-line-all} {
+    @include absolute-center-all();
+    border: $orbit-line;
+    border-radius: $circle;
+    transition: $orbit-focus-out;
+}
+
+// ORBIT LINE
+.orbit-line_wrap {
+    position: absolute;
+    z-index: -1;
+    transition: transform 1s, opacity 3s;
+}
+
+// SOLAR SYSTEM PLANETS
+.solar_system {
+    @include absolute-center-all();
+    @include flex-center-all();
+    width: 125vw;
+    height: 125vh;
+    overflow: hidden;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: $solar_system-focus-out-transition;
+}
+
+.solar_system-focus {
+    transform: translate(-50%, -50%) scale(1);
+    transition: $solar_system-focus-in-transition;
+}
+
+// SUN
+.sun_space {
+    transition: $orbit-focus-out;
+
+    .sun_wrap {
+        .sun {
+            position: relative;
+            @include size($sun-size);
+            @include flex-center-all();
+            @include background-properties-sun(url(../img/maps/sun.jpg));
+            @include animation-properties-3(sun-map-spin, linear, infinite, $sun-map-duration, planet-spin, linear, infinite, $sun-spin-duration, sun-pulse, ease-in-out, infinite, $sun-pulse-duration);
+            border-radius: $circle;
+            cursor: pointer;
+            transition: $planet-focus-out-transition;
+
+            &:before {
+                @include before-after();
+                @include size($planet-atmosphere-size);
+                @include animation-properties-2(map-spin, linear, infinite, $sun-flares-duration, sun_flares-pulse, ease-in-out, infinite, $sun-pulse-duration);
+                @include background-properties-planet(url(../img/maps/atmosphere.png));
+                border-radius: $circle;
+                opacity: 0.4;
+            }
+
+            &:after {
+                @include before-after();
+                @include size(100%);
+                border-radius: $circle;
+                box-shadow: $sun-shine;
+                transition: $planet-shadow-focus-out-transition;
+            }
+        }
+    }
+}
+
+.sun_focus {
+    @include size($planet-focus-size);
+    transition: $planet-focus-in-transition;
+
+    &:after {
+        @include before-after();
+        @include size(100%);
+        border-radius: 50%;
+        box-shadow: $sun-shine-after;
+        transition: $planet-shadow-focus-out-transition;
+    }
+}
+
+// MERCURY
+.orbit-line_mercury {
+    @include size($mercury-orbit-size);
+}
+
+.mercury_space {
+
+    .mercury_orbit {
+        @include size($mercury-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $mercury-orbit-duration);
+
+        .mercury_wrap {
+            @include wrap-size($mercury-size);
+
+            .mercury {
+                top: -$mercury-size / 2;
+                @include size($mercury-size);
+                @include background-properties-planet(url(../img/maps/mercury.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $mercury-map-duration);
+                transform: $mercury-axis-tilt;
+
+                &:before {
+                    @include size($planet-atmosphere-size);
+                    @include background-properties-planet(url(../img/maps/atmosphere_2.png));
+                    @include animation-properties-1(map-spin, linear, infinite, $mercury-atmosphere-duration);
+                    border-radius: $circle;
+                    opacity: 1;
+                }
+
+                &:after {
+                    transform: $mercury-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.mercury_focus {
+    @include size(200px !important);
+
+    &:after {}
+}
+
+// VENUS
+.orbit-line_venus {
+    @include size($venus-orbit-size);
+}
+
+.venus_space {
+
+    .venus_orbit {
+        @include size($venus-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $venus-orbit-duration);
+
+        .venus_wrap {
+            @include wrap-size($venus-size);
+
+            .venus {
+                top: -$venus-size / 2;
+                @include size($venus-size);
+                @include background-properties-planet(url(../img/maps/venus.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $venus-map-duration);
+                transform: $venus-axis-tilt;
+
+                &:before {
+                    @include background-properties-planet(url(../img/maps/atmosphere.png));
+                    @include animation-properties-1(map-spin, linear, infinite, $venus-atmosphere-duration);
+                    opacity: 0.8;
+                }
+
+                &:after {
+                    transform: $venus-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.venus_focus {
+
+    &:after {}
+}
+
+// EARTH
+.orbit-line_earth {
+    @include size($earth-orbit-size);
+}
+
+.earth_space {
+
+    .earth_orbit {
+        @include size($earth-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $earth-orbit-duration);
+
+        .earth_wrap {
+            @include wrap-size($earth-size);
+
+            .earth {
+                top: -$earth-size / 2;
+                @include size($earth-size);
+                @include background-properties-planet(url(../img/maps/earth.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $earth-map-duration);
+                transform: $earth-axis-tilt;
+
+                &:before {
+                    @include background-properties-planet(url(../img/maps/earth_clouds.png));
+                    @include animation-properties-1(map-spin, linear, infinite, $earth-atmosphere-duration);
+                    opacity: 0.8;
+                }
+
+                &:after {
+                    transform: $earth-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.earth_focus {
+
+    &:after {}
+}
+
+// MARS
+.orbit-line_mars {
+    @include size($mars-orbit-size);
+}
+
+.mars_space {
+
+    .mars_orbit {
+        @include size($mars-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $mars-orbit-duration);
+
+        .mars_wrap {
+            @include wrap-size($mars-size);
+
+            .mars {
+                top: -$mars-size / 2;
+                @include size($mars-size);
+                @include background-properties-planet(url(../img/maps/mars.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $mars-map-duration);
+                transform: $mars-axis-tilt;
+
+                &:before {
+                    @include background-properties-planet(url(../img/maps/atmosphere_3.png));
+                    @include animation-properties-1(map-spin, linear, infinite, $mars-atmosphere-duration);
+                    opacity: 0.6;
+                }
+
+                &:after {
+                    transform: $mars-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.mars_focus {
+
+    &:after {}
+}
+
+// JUPITER
+.orbit-line_jupiter {
+    @include size($jupiter-orbit-size);
+}
+
+.jupiter_space {
+
+    .jupiter_orbit {
+        @include size($jupiter-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $jupiter-orbit-duration);
+
+        .jupiter_wrap {
+            @include wrap-size($jupiter-size);
+
+            .jupiter {
+                top: -$jupiter-size / 2;
+                @include size($jupiter-size);
+                @include background-properties-planet(url(../img/maps/jupiter.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $jupiter-map-duration);
+                transform: $jupiter-axis-tilt;
+
+                &:before {
+                    @include background-properties-planet(url(../img/maps/atmosphere_3.png));
+                    @include animation-properties-1(map-spin, linear, infinite, $jupiter-atmosphere-duration);
+                    opacity: 1;
+                }
+
+                &:after {
+                    transform: $jupiter-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.jupiter_focus {
+
+    &:after {}
+}
+
+// SATURN
+.orbit-line_saturn {
+    @include size($saturn-orbit-size);
+}
+
+.saturn_space {
+
+    .saturn_orbit {
+        @include size($saturn-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $saturn-orbit-duration);
+
+        .saturn_wrap {
+            @include wrap-size($saturn-size);
+
+            .saturn {
+                top: -$saturn-size / 2;
+                @include size($saturn-size);
+                @include background-properties-planet(url(../img/maps/saturn.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $saturn-map-duration);
+                transform: $saturn-axis-tilt;
+
+                &:before {
+                    width: 200%;
+                    height: 130%;
+                    @include background-properties-planet(url(../img/maps/saturn_ring.png));
+                    background-repeat: no-repeat;
+                    background-size: $planet-atmosphere-size;
+                    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.9)) blur(0.6px);
+                    transform: rotate(-35deg) !important;
+                    opacity: 0.4;
+                    border-radius: 0% !important;
+                }
+
+                &:after {
+                    transform: $saturn-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.saturn_focus {
+
+    &:after {}
+}
+
+// URANUS
+.orbit-line_uranus {
+    @include size($uranus-orbit-size);
+}
+
+.uranus_space {
+
+    .uranus_orbit {
+        @include size($uranus-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $uranus-orbit-duration);
+
+        .uranus_wrap {
+            @include wrap-size($uranus-size);
+
+            .uranus {
+                top: -$uranus-size / 2;
+                @include size($uranus-size);
+                @include background-properties-planet(url(../img/maps/uranus.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $uranus-map-duration);
+                transform: $uranus-axis-tilt;
+
+                &:before {
+                    @include background-properties-planet(url(../img/maps/atmosphere_3.png));
+                    @include animation-properties-1(map-spin, linear, infinite, $uranus-atmosphere-duration);
+                    opacity: 0.4;
+                }
+
+                &:after {
+                    transform: $uranus-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.uranus_focus {
+
+    &:after {}
+}
+
+// NEPTUNE
+.orbit-line_neptune {
+    @include size($neptune-orbit-size);
+}
+
+.neptune_space {
+
+    .neptune_orbit {
+        @include size($neptune-orbit-size);
+        @include animation-properties-1(orbit-spin, linear, infinite, $neptune-orbit-duration);
+
+        .neptune_wrap {
+            @include wrap-size($neptune-size);
+
+            .neptune {
+                top: -$neptune-size / 2;
+                @include size($neptune-size);
+                @include background-properties-planet(url(../img/maps/neptune.jpg));
+                @include animation-properties-1(map-spin, linear, infinite, $neptune-map-duration);
+                transform: $neptune-axis-tilt;
+
+                &:before {
+                    @include background-properties-planet(url(../img/maps/atmosphere_3.png));
+                    @include animation-properties-1(map-spin, linear, infinite, $neptune-atmosphere-duration);
+                    opacity: 0.3;
+                }
+
+                &:after {
+                    transform: $neptune-shadow-tilt;
+                }
+            }
+        }
+    }
+}
+
+.neptune_focus {
+
+    &:after {}
+}
+
+// BUTTONS
+.button {
+    position: absolute;
+    @include flex-end-center();
+    top: 0px;
+    left: -5px;
+    width: 170px;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0px 8px 0px 0px;
+    border-radius: 0px 8px 8px 0px;
+    background-color: $card-color;
+    color: $font-color;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 2s, margin-left .1s;
+    opacity: 0.9;
+    z-index: 21;
+
+    &:hover {
+        background-color: $card-color;
+        margin-left: 5px;
+    }
+
+    &:active {
+        background-color: $card-color;
+    }
+
+    .menu_button {
+        margin: 0px 0px 0px 10px;
+        font-size: 1rem;
+        color: $button-icon-inactive-color;
+    }
+
+    &:hover .menu_button {
+        color: $button-icon-color;
+    }
+}
+
+// MENU BUTTONS
+.orbit-start {
+    top: 20px;
+}
+
+.orbit-line {
+    top: 70px;
+}
+
+.reset-all {
+    top: 120px;
+}
+
+.all_cards {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 1s;
+}
+
+// PLANET CARDS
+#{$planet-card-all} {
+    opacity: 0;
+}
+
+.planet_card {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    height: auto;
+    max-height: 40px;
+    width: 350px;
+    border-radius: 0px 8px 8px 0px;
+    color: $font-color;
+    overflow: hidden;
+    background: $card-closed-color;
+
+    h1 {
+        @include flex-between-center();
+        height: 40px;
+        margin: 0;
+        padding: 0px 12px 0px 0px;
+        font-size: 1.4rem;
+
+        .nav_buttons {
+            margin: 0px 0px 0px 8px;
+        }
+    }
+
+    p {
+        margin: 0;
+        padding: 8px 8px 0px 12px;
+        font-size: 0.85rem;
+        opacity: 0;
+        transition: 1s;
+    }
+}
+
+.nav_circle {
+    float: right;
+    margin: 4px;
+    border-radius: $circle;
+    color: $button-icon-inactive-color;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .1s;
+
+    &:hover {
+        color: $button-icon-color;
+    }
+}
+
+.expand {
+    &:before {
+        content: '\f13a' !important;
+    }
+}
+
+.expand_more {
+    color: $button-icon-color;
+
+    &:hover {
+        color: $card-color !important;
+    }
+}
+
+// IMPORTS
+@import 'animation_classes';
+@import 'focus_animations';
+@import 'keyframes';
+
+
+// MEDIA QUERIES
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .solar_system {
+        top: 80%;
+        height: 180vh;
+    }
+
+    .button {
+        left: -136px;
+    }
+}

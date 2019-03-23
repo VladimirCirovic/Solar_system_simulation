@@ -1,0 +1,15 @@
+{
+  "name": "solar-system_v1.8.8",
+  "version": "1.8.8",
+  "description": "Solar system simulation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass sass/sass_style.scss css/style.css -w"
+  },
+  "author": "Vladimir Cirovic",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

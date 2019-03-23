@@ -1,0 +1,91 @@
+// OVERLAY NO-CLICK WAIT
+.animation_overlay-on {
+    height: 100vh;
+    z-index: 20;
+}
+
+// ANIMATION ORBIT START, PAUSE AND RESET
+.orbit-start {
+    animation-play-state: running;
+}
+
+.orbit-stop {
+    animation-play-state: paused;
+}
+
+.orbit-reset {
+    animation-name: none !important;
+}
+
+// ANIMATION BUTTONS ORBIT START AND ORBIT LINES
+.pause {
+    &:before {
+        content: '\f28b' !important;
+    }
+}
+
+.lines_off {
+    &:before {
+        content: '\f111' !important;
+    }
+}
+
+// ANIMATION BUTTON OUT
+.button-out {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -1;
+    transition: .8s, opacity 1s;
+}
+
+// ANIMATION ORBIT LINE ON OFF
+.orbit-line-off {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.orbit-line_wrap-out {
+    transform: rotateX(90deg) scaleX(20)  translateZ(0);
+    opacity: 0;
+    transition: transform 6s, opacity 2s;
+}
+
+// ANIMATION CARDS IN
+.all_cards-in {
+    opacity: 1;
+    transform: translate(0%);
+    transition: opacity 1s, transform 1s;
+}
+
+// PLANET CARD IN
+.planet_card-in {
+    height: auto;
+    max-height: 1000px;
+    background: $card-open-color;
+    transition: max-height 1.6s ease-in-out, height 1.6s ease-in-out !important;
+}
+
+.planet_card_p-in {
+    opacity: 1 !important;
+    transition: 2.6s !important;
+}
+
+#{$planet-card-all-in} {
+    opacity: 1;
+    z-index: 1;
+    transition: .4s;
+}
+
+// ANIMATION SPACE MOVE / STILL
+.space_map-move {
+    background-size: 3072px 1536px;
+    background-repeat: repeat;
+    transition: background-size 4s, background-position 3s;
+    @include animation-properties-1(space-move, linear, infinite, 40s);
+}
+
+.space_map-still {
+    background-size: 3072px 1536px;
+    background-repeat: repeat;
+    transition: background-size 4s, background-position 3s;
+}

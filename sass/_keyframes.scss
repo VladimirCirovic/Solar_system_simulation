@@ -1,0 +1,70 @@
+@keyframes orbit-spin {
+    from {
+        transform: rotate(0deg) translateZ(0);
+    }
+
+    to {
+        transform: rotate(360deg) translateZ(0);
+    }
+}
+
+@keyframes map-spin {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -500% center;
+    }
+}
+
+@keyframes sun-map-spin {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -440% center;
+    }
+}
+
+@keyframes sun_flares-pulse {
+    0% {
+        opacity: 0.5;
+        filter: brightness(100%);
+    }
+
+    50% {
+        opacity: 1;
+        filter: brightness(125%);
+    }
+
+    100% {
+        opacity: 0.5;
+        filter: brightness(100%);
+    }
+}
+
+@keyframes sun-pulse {
+    0% {
+        box-shadow: 0px 0px 16px 0px rgba(255, 255, 255, 0), inset 0px 0px 40px 6px rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        box-shadow: 0px 0px 80px -4px rgba(255, 255, 255, 0.8), inset 0px 0px 30px 6px rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0px 0px 16px 0px rgba(255, 255, 255, 0), inset 0px 0px 40px 6px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes space-move {
+    from {
+        background-position: center bottom;
+    }
+
+    to {
+        background-position: 2048px bottom;
+    }
+}
