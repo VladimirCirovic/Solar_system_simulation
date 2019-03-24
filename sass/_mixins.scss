@@ -51,7 +51,7 @@
 @mixin background-properties-saturn-ring($image-path) {
     background-image: $image-path;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -4px center;
     background-size: 99%;
 }
 

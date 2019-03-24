@@ -54,13 +54,13 @@ body {
 .mercury:after, .venus:after, .earth:after, .mars:after, .jupiter:after, .saturn:after, .uranus:after, .neptune:after {
   content: '';
   position: absolute;
-  width: 102%;
-  height: 102%;
+  width: 101.8%;
+  height: 101.8%;
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: -30px 100px;
-  box-shadow: 0px -4px 4px -2px rgba(0, 0, 0, 0.95), inset -2px 16px 14px -4px rgba(0, 0, 0, 0.9), inset 2px -12px 16px -2px rgba(255, 255, 255, 0.4), -1px 6px 8px -5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px -4px 4px -2px rgba(0, 0, 0, 0.95), inset -2px 14px 12px -4px black, inset 2px -12px 16px -2px rgba(255, 255, 255, 0.4), -1px 6px 8px -5px rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   transition: box-shadow 2s; }
 
@@ -70,9 +70,9 @@ body {
   transition: width 3s ease-in, height 3s ease-in !important; }
 
 .mercury_focus:after, .venus_focus:after, .earth_focus:after, .mars_focus:after, .jupiter_focus:after, .saturn_focus:after, .uranus_focus:after, .neptune_focus:after {
-  width: 100.5% !important;
-  height: 100.5% !important;
-  box-shadow: 0px -20px 20px -5px rgba(0, 0, 0, 0.9), inset -10px 90px 90px -20px rgba(0, 0, 0, 0.96), inset 10px -80px 80px -20px rgba(255, 255, 255, 0.5), -2px 20px 40px -10px rgba(255, 255, 255, 0.5) !important;
+  width: 100.6% !important;
+  height: 100.6% !important;
+  box-shadow: 0px -20px 20px -5px rgba(0, 0, 0, 0.9), inset -10px 100px 80px -20px black, inset 10px -80px 80px -20px rgba(255, 255, 255, 0.5), -2px 20px 40px -10px rgba(255, 255, 255, 0.5) !important;
   transition: box-shadow 4s !important; }
 
 .orbit-line_mercury, .orbit-line_venus, .orbit-line_earth, .orbit-line_mars, .orbit-line_jupiter, .orbit-line_saturn, .orbit-line_uranus, .orbit-line_neptune {
@@ -184,7 +184,7 @@ body {
       animation-name: map-spin;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 20s;
+      animation-duration: 100s;
       transform: rotate(-1deg); }
       .mercury_space .mercury_orbit .mercury_wrap .mercury:before {
         width: 99%;
@@ -196,7 +196,7 @@ body {
         animation-name: map-spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-duration: 15s;
+        animation-duration: 90s;
         border-radius: 50%;
         opacity: 1; }
       .mercury_space .mercury_orbit .mercury_wrap .mercury:after {
@@ -230,7 +230,7 @@ body {
       animation-name: map-spin;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 20s;
+      animation-duration: 200s;
       transform: rotate(177deg); }
       .venus_space .venus_orbit .venus_wrap .venus:before {
         background-image: url(../img/maps/atmosphere.png);
@@ -240,7 +240,7 @@ body {
         animation-name: map-spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-duration: 15s;
+        animation-duration: 150s;
         opacity: 0.8; }
       .venus_space .venus_orbit .venus_wrap .venus:after {
         transform: rotate(-177deg); }
@@ -279,7 +279,7 @@ body {
         animation-name: map-spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-duration: 40s;
+        animation-duration: 45s;
         opacity: 0.8; }
       .earth_space .earth_orbit .earth_wrap .earth:after {
         transform: rotate(23deg); }
@@ -308,7 +308,7 @@ body {
       animation-name: map-spin;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 40s;
+      animation-duration: 55s;
       transform: rotate(-25deg); }
       .mars_space .mars_orbit .mars_wrap .mars:before {
         background-image: url(../img/maps/atmosphere_3.png);
@@ -318,7 +318,7 @@ body {
         animation-name: map-spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-duration: 30s;
+        animation-duration: 50s;
         opacity: 0.6; }
       .mars_space .mars_orbit .mars_wrap .mars:after {
         transform: rotate(25deg); }
@@ -347,7 +347,7 @@ body {
       animation-name: map-spin;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 40s;
+      animation-duration: 25s;
       transform: rotate(-3deg); }
       .jupiter_space .jupiter_orbit .jupiter_wrap .jupiter:before {
         background-image: url(../img/maps/atmosphere_3.png);
@@ -357,7 +357,7 @@ body {
         animation-name: map-spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-duration: 35s;
+        animation-duration: 20s;
         opacity: 1; }
       .jupiter_space .jupiter_orbit .jupiter_wrap .jupiter:after {
         transform: rotate(3deg); }
@@ -386,14 +386,14 @@ body {
       animation-name: map-spin;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 20s;
+      animation-duration: 30s;
       transform: rotate(-26deg); }
       .saturn_space .saturn_orbit .saturn_wrap .saturn:before {
         width: 200%;
         height: 130%;
         background-image: url(../img/maps/saturn_ring.png);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: -4px center;
         background-size: 99%;
         filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.9)) blur(0.6px);
         opacity: 0.4;
@@ -426,7 +426,7 @@ body {
       animation-name: map-spin;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 20s;
+      animation-duration: 40s;
       transform: rotate(98deg); }
       .uranus_space .uranus_orbit .uranus_wrap .uranus:before {
         background-image: url(../img/maps/atmosphere_3.png);
@@ -436,7 +436,7 @@ body {
         animation-name: map-spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-duration: 30s;
+        animation-duration: 35s;
         opacity: 0.4; }
       .uranus_space .uranus_orbit .uranus_wrap .uranus:after {
         transform: rotate(-98deg); }
@@ -465,7 +465,7 @@ body {
       animation-name: map-spin;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-duration: 20s;
+      animation-duration: 35s;
       transform: rotate(-28deg); }
       .neptune_space .neptune_orbit .neptune_wrap .neptune:before {
         background-image: url(../img/maps/atmosphere_3.png);
@@ -475,7 +475,7 @@ body {
         animation-name: map-spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-duration: 15s;
+        animation-duration: 30s;
         opacity: 0.3; }
       .neptune_space .neptune_orbit .neptune_wrap .neptune:after {
         transform: rotate(28deg); }
