@@ -113,7 +113,7 @@ body {
             @include size($sun-size);
             @include flex-center-all();
             @include background-properties-sun(url(../img/maps/sun.jpg));
-            @include animation-properties-3(sun-map-spin, linear, infinite, $sun-map-duration, planet-spin, linear, infinite, $sun-spin-duration, sun-pulse, ease-in-out, infinite, $sun-pulse-duration);
+            @include animation-properties-2(sun-map-spin, linear, infinite, $sun-map-duration, sun-pulse, ease-in-out, infinite, $sun-pulse-duration);
             border-radius: $circle;
             cursor: pointer;
             transition: $planet-focus-out-transition;

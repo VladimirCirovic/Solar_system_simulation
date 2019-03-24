@@ -230,7 +230,7 @@
     background-size: 4096px 2048px;
     background-repeat: repeat;
     transition: background-size 4s, background-position 3s;
-    @include animation-properties-1(space-move, linear, infinite, 40s);
+    @include animation-properties-1(space-move, linear, infinite, 60s);
 }
 
 .space_map-still {

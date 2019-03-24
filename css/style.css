@@ -116,10 +116,10 @@ body {
     background-repeat: repeat;
     background-position: center;
     background-size: 220%;
-    animation-name: sun-map-spin, planet-spin, sun-pulse;
-    animation-timing-function: linear, linear, ease-in-out;
-    animation-iteration-count: infinite, infinite, infinite;
-    animation-duration: 220s, 120s, 4s;
+    animation-name: sun-map-spin, sun-pulse;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-duration: 220s, 4s;
     border-radius: 50%;
     cursor: pointer;
     transition: width 1s ease-in, height 1s ease-in; }
@@ -750,7 +750,7 @@ body {
   animation-name: space-move;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: 40s; }
+  animation-duration: 60s; }
 
 .space_map-still {
   background-size: 3072px 1536px;
@@ -758,12 +758,6 @@ body {
   transition: background-size 4s, background-position 3s; }
 
 @keyframes orbit-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes planet-spin {
   from {
     transform: rotate(0deg); }
   to {

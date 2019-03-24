@@ -76,13 +76,6 @@
     animation-duration: $duration1, $duration2;
 }
 
-@mixin animation-properties-3($name1, $timing1, $iteration1, $duration1, $name2, $timing2, $iteration2, $duration2, $name3, $timing3, $iteration3, $duration3) {
-    animation-name: $name1, $name2, $name3;
-    animation-timing-function: $timing1, $timing2, $timing3;
-    animation-iteration-count: $iteration1, $iteration2, $iteration3;
-    animation-duration: $duration1, $duration2, $duration3;
-}
-
 @mixin planet-shine {
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
     background-repeat: no-repeat;
