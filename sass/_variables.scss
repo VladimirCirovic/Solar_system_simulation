@@ -12,7 +12,7 @@ $mercury-size: 22px;
 $mercury-orbit-duration: 5s;
 $mercury-map-duration: 20s;
 $mercury-atmosphere-duration: 15s;
-$mercury-axis-tilt: 1deg;
+$mercury-axis-tilt: -1deg;
 $mercury-shadow-tilt: -$mercury-axis-tilt;
 $mercury-atmosphere-opacity: 1;
 
@@ -32,7 +32,7 @@ $earth-size: 38px;
 $earth-orbit-duration: 8s;
 $earth-map-duration: 50s;
 $earth-atmosphere-duration: 40s;
-$earth-axis-tilt: 23deg;
+$earth-axis-tilt: -23deg;
 $earth-shadow-tilt: -$earth-axis-tilt;
 $earth-atmosphere-opacity: 0.8;
 
@@ -42,7 +42,7 @@ $mars-size: 32px;
 $mars-orbit-duration: 10s;
 $mars-map-duration: 40s;
 $mars-atmosphere-duration: 30s;
-$mars-axis-tilt: 25deg;
+$mars-axis-tilt: -25deg;
 $mars-shadow-tilt: -$mars-axis-tilt;
 $mars-atmosphere-opacity: 0.6;
 
@@ -52,7 +52,7 @@ $jupiter-size: 62px;
 $jupiter-orbit-duration: 12s;
 $jupiter-map-duration: 40s;
 $jupiter-atmosphere-duration: 35s;
-$jupiter-axis-tilt: 3deg;
+$jupiter-axis-tilt: -3deg;
 $jupiter-shadow-tilt: -$jupiter-axis-tilt;
 $jupiter-atmosphere-opacity: 1;
 
@@ -61,7 +61,7 @@ $saturn-orbit-size: 850px;
 $saturn-size: 54px;
 $saturn-orbit-duration: 14s;
 $saturn-map-duration: 20s;
-$saturn-axis-tilt: 27deg;
+$saturn-axis-tilt: -26deg;
 $saturn-shadow-tilt: -$saturn-axis-tilt;
 $saturn-ring-opacity: 0.4;
 $saturn-ring-tilt: -35deg;
@@ -82,7 +82,7 @@ $neptune-size: 44px;
 $neptune-orbit-duration: 20s;
 $neptune-map-duration: 20s;
 $neptune-atmosphere-duration: 15s;
-$neptune-axis-tilt: 30deg;
+$neptune-axis-tilt: -28deg;
 $neptune-shadow-tilt: -$neptune-axis-tilt;
 $neptune-atmosphere-opacity: 0.3;
 
