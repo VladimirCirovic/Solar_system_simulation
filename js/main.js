@@ -20,8 +20,8 @@ $(document).ready(function () {
 
 	// ARRAYS
 	var planet_in_arr = ['sun', 'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
-	var orbit = ['.mercury_orbit', '.venus_orbit', '.earth_orbit', '.mars_orbit', '.jupiter_orbit', '.saturn_orbit', '.uranus_orbit', '.neptune_orbit'];
-	var space_arr = ['.mercury_space', '.venus_space', '.earth_space', '.mars_space', '.jupiter_space', '.saturn_space', '.uranus_space', '.neptune_space'];
+	var orbit = ['#mercury_orbit', '#venus_orbit', '#earth_orbit', '#mars_orbit', '#jupiter_orbit', '#saturn_orbit', '#uranus_orbit', '#neptune_orbit'];
+	var space_arr = ['#mercury_space', '#venus_space', '#earth_space', '#mars_space', '#jupiter_space', '#saturn_space', '#uranus_space', '#neptune_space'];
 
 	// PLANET ORBIT ROTATION TOGGLE
 	$.each(orbit, function (i, planet) {
