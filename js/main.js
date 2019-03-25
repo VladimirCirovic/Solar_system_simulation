@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
 	// VARIABLES
-
 	var $solar_system = $('.solar_system');
 	var $orbit_line_wrap = $('.orbit-line_wrap');
 	var $all_cards = $('.all_cards');
@@ -166,7 +165,7 @@ $(document).ready(function () {
 
 			} else if ($(planet).hasClass('orbit-stop')) {
 
-				$('.animation_overlay').removeClass('animation_overlay-on');
+				$('.animation_overlay').removeClass('animation_overlay-on animation_overlay-off');
 				$(planet).addClass('orbit-reset');
 				setTimeout(function () {
 					$(planet).removeClass('orbit-reset');
