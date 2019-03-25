@@ -220,7 +220,7 @@
 }
 
 #{$planet-card-all-in} {
-    opacity: 1;
+    opacity: 1 !important;
     z-index: 1;
     transition: .4s;
 }

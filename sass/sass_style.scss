@@ -518,15 +518,27 @@ body {
 }
 
 // MENU BUTTONS
-.orbit-start {
+// .orbit-start {
+//     top: 20px;
+// }
+
+// .orbit-line {
+//     top: 70px;
+// }
+
+// .reset-all {
+//     top: 120px;
+// }
+
+.button:nth-of-type(2) {
     top: 20px;
 }
 
-.orbit-line {
+.button:nth-of-type(3) {
     top: 70px;
 }
 
-.reset-all {
+.button:nth-of-type(4) {
     top: 120px;
 }
 

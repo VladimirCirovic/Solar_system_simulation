@@ -14,14 +14,19 @@ $(document).ready(function () {
 	var $play = $('.play');
 	var $lines = $('.lines');
 
-	// PLANET ORBIT ROTATION TOGGLE
+	var $orbit_start = $('#orbit-start');
+	var $orbit_line = $('#orbit-line');
+	var $reset_all = $('#reset-all')
+
+	// ARRAYS
 	var planet_in_arr = ['sun', 'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
 	var orbit = ['.mercury_orbit', '.venus_orbit', '.earth_orbit', '.mars_orbit', '.jupiter_orbit', '.saturn_orbit', '.uranus_orbit', '.neptune_orbit'];
 	var space_arr = ['.mercury_space', '.venus_space', '.earth_space', '.mars_space', '.jupiter_space', '.saturn_space', '.uranus_space', '.neptune_space'];
 
+	// PLANET ORBIT ROTATION TOGGLE
 	$.each(orbit, function (i, planet) {
 
-		$('.orbit-start').click(function () {
+		$orbit_start.click(function () {
 
 			if ($(planet).hasClass('orbit-stop')) {
 
@@ -37,9 +42,42 @@ $(document).ready(function () {
 		});
 	});
 
+	// ORBIT LINES ON/OFF TOGGLE
+	$orbit_line.click(function () {
 
+		if ($orbit_line_wrap.hasClass('orbit-line-off')) {
+
+			$orbit_line_wrap.removeClass('orbit-line-off');
+		} else {
+
+			$orbit_line_wrap.addClass('orbit-line-off');
+		}
+	});
+
+	// RESET ALL
+	$.each(orbit, function (i, planet) {
+
+		$reset_all.click(function () {
+
+			if ($(planet).hasClass('orbit-start') || $(planet).hasClass('orbit-stop')) {
+
+				$(planet).removeClass('orbit-start');
+				$(planet).addClass('orbit-stop');
+				$('.animation_overlay, .animation_overlay-off').removeClass('animation_overlay-on');
+				$(planet).addClass('orbit-reset');
+				$play.removeClass('pause').addClass('play');
+				$lines.removeClass('lines_off').addClass();
+				$orbit_line_wrap.removeClass('orbit-line-off');
+				setTimeout(function () {
+					$(planet).removeClass('orbit-reset');
+				}, 100);
+			}
+		});
+	});
+
+	// PLANET FOCUS TOGGLE
 	function planet_focus_toggle(planet) {
-		var target = $('.' + planet + ', .close-button_' + planet);
+		var target = $('#' + planet + ', .close-button_' + planet);
 
 		target.click(function () {
 			var this_planet_index = planet_in_arr.findIndex(function (el) {
@@ -50,15 +88,14 @@ $(document).ready(function () {
 				for (var i = 0; i < planet_in_arr.length; i++) {
 					var el = planet_in_arr[i];
 
-
 					if (el === planet) {
 						continue;
 					}
 
 					if (i < this_planet_index) {
-						$('.' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-in').addClass(planet_in_arr[i] + '-out-forward');
+						$('#' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-in').addClass(planet_in_arr[i] + '-out-forward');
 					} else {
-						$('.' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-in').addClass(planet_in_arr[i] + '-out-backward');
+						$('#' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-in').addClass(planet_in_arr[i] + '-out-backward');
 					}
 				}
 			}
@@ -67,15 +104,14 @@ $(document).ready(function () {
 				for (var i = 0; i < planet_in_arr.length; i++) {
 					var el = planet_in_arr[i];
 
-
 					if (el === planet) {
 						continue;
 					}
 
 					if (i < this_planet_index) {
-						$('.' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-out-forward').addClass(planet_in_arr[i] + '-in');
+						$('#' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-out-forward').addClass(planet_in_arr[i] + '-in');
 					} else {
-						$('.' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-out-backward').addClass(planet_in_arr[i] + '-in');
+						$('#' + planet_in_arr[i] + '_wrap').removeClass(planet_in_arr[i] + '-out-backward').addClass(planet_in_arr[i] + '-in');
 					}
 				}
 			}
@@ -86,14 +122,14 @@ $(document).ready(function () {
 				$orbit_line_wrap.removeClass('orbit-line_wrap-out');
 				$all_cards.removeClass('all_cards-in');
 				setTimeout(function () {
-					$('.card_' + planet).removeClass('card_' + planet + '-in');
+					$('#card_' + planet).removeClass('card_' + planet + '-in');
 					$planet_card.removeClass('planet_card-in');
 					$planet_card_p.removeClass('planet_card_p-in');
 				}, 500);
 				$button.removeClass('button-out');
 				$body.removeClass('space_map-move');
-				$('.' + planet + '_space').removeClass('planet-space-front');
-				$('.' + planet + '_orbit').removeClass('planet-orbit-focus');
+				$('#' + planet + '_space').removeClass('planet-space-front');
+				$('#' + planet + '_orbit').removeClass('planet-orbit-focus');
 				$('#' + planet).removeClass(planet + '_focus');
 
 				$.each(space_arr, function (i, space) {
@@ -110,69 +146,32 @@ $(document).ready(function () {
 				}, 3000);
 				$orbit_line_wrap.addClass('orbit-line_wrap-out');
 				$all_cards.addClass('all_cards-in');
-				$('.card_' + planet).addClass('card_' + planet + '-in');
+				$('#card_' + planet).addClass('card_' + planet + '-in');
 				setTimeout(function () {
 					$planet_card.addClass('planet_card-in');
 					$planet_card_p.addClass('planet_card_p-in');
 				}, 2000);
 				$button.addClass('button-out');
 				$body.addClass('space_map-move');
-				$('.' + planet + '_orbit').addClass('planet-orbit-focus');
+				$('#' + planet + '_space').addClass('planet-space-front');
+				$('#' + planet + '_orbit').addClass('planet-orbit-focus');
+				$('#' + planet).addClass(planet + '_focus');
+
 				setTimeout(function () {
 					$('.' + planet + '_space').addClass('planet-space-front');
 				}, 2000);
-
-				$('#' + planet).addClass(planet + '_focus');
 
 				animationIn();
 
 				$.each(space_arr, function (i, space) {
 					setTimeout(function () {
 						$(space).addClass('planet-space-out-hide');
-						$('.' + planet + '_space').removeClass('planet-space-out-hide');
+						$('#' + planet + '_space').removeClass('planet-space-out-hide');
 					}, 4000);
 				});
 			}
 		});
 	}
-
-
-	$('.orbit-line').click(function () {
-
-		if ($orbit_line_wrap.hasClass('orbit-line-off')) {
-
-			$orbit_line_wrap.removeClass('orbit-line-off');
-		} else {
-
-			$orbit_line_wrap.addClass('orbit-line-off');
-		}
-	});
-
-
-	$.each(orbit, function (i, planet) {
-
-		$('.reset-all').click(function () {
-
-			if ($(planet).hasClass('orbit-start')) {
-
-				$(planet).removeClass('orbit-start');
-				$(planet).addClass('orbit-stop');
-				$('.animation_overlay').removeClass('animation_overlay-on');
-				$(planet).addClass('orbit-reset');
-				setTimeout(function () {
-					$(planet).removeClass('orbit-reset');
-				}, 100);
-
-			} else if ($(planet).hasClass('orbit-stop')) {
-
-				$('.animation_overlay').removeClass('animation_overlay-on animation_overlay-off');
-				$(planet).addClass('orbit-reset');
-				setTimeout(function () {
-					$(planet).removeClass('orbit-reset');
-				}, 100);
-			}
-		});
-	});
 
 	$.each(planet_in_arr, function (i, pl) {
 		planet_focus_toggle(pl);
@@ -199,7 +198,7 @@ $(document).ready(function () {
 	});
 
 	// MENU BUTTONS ICON SWAP
-	$('.orbit-start').click(function () {
+	$orbit_start.click(function () {
 
 		if ($play.hasClass('play')) {
 
@@ -213,7 +212,7 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.orbit-line').click(function () {
+	$orbit_line.click(function () {
 
 		if ($lines.hasClass('lines_on')) {
 

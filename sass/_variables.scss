@@ -148,5 +148,5 @@ $planet-in: ".sun-in, .mercury-in, .venus-in, .earth-in, .mars-in, .jupiter-in, 
 $planet-out-forward-backward: ".mercury-out-backward, .mercury-out-forward, .venus-out-backward, .venus-out-forward, .earth-out-backward, .earth-out-forward, .mars-out-backward, .mars-out-forward, .jupiter-out-backward, .jupiter-out-forward, .saturn-out-backward, .saturn_out-forward, .uranus-out-backward, .uranus-out-forward, .neptune-out-backward, .neptune-out-forward";
 
 // CARD STRUCTURE
-$planet-card-all: ".card_sun, .card_mercury, .card_venus, .card_earth, .card_mars, .card_jupiter, .card_saturn, .card_uranus, .card_neptune";
+$planet-card-all: "#card_sun, #card_mercury, #card_venus, #card_earth, #card_mars, #card_jupiter, #card_saturn, #card_uranus, #card_neptune";
 $planet-card-all-in: ".card_sun-in, .card_mercury-in, .card_venus-in, .card_earth-in, .card_mars-in, .card_jupiter-in, .card_saturn-in, .card_uranus-in, .card_neptune-in";
