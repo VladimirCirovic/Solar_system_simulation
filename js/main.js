@@ -1,14 +1,6 @@
 $(document).ready(function () {
 
 	// VARIABLES
-	var $mercury_wrap = $('.mercury_wrap');
-	var $venus_wrap = $('.venus_wrap');
-	var $earth_wrap = $('.earth_wrap');
-	var $mars_wrap = $('.mars_wrap');
-	var $jupiter_wrap = $('.jupiter_wrap');
-	var $saturn_wrap = $('.saturn_wrap');
-	var $uranus_wrap = $('.uranus_wrap');
-	var $neptune_wrap = $('.neptune_wrap');
 
 	var $solar_system = $('.solar_system');
 	var $orbit_line_wrap = $('.orbit-line_wrap');
@@ -20,8 +12,8 @@ $(document).ready(function () {
 	var $animation_overlay_off = $('.animation_overlay-off');
 
 	var $colapse_button = $('.colapse_button');
-	var $play = $('#play');
-	var $lines = $('#lines');
+	var $play = $('.play');
+	var $lines = $('.lines');
 
 	// PLANET ORBIT ROTATION TOGGLE
 	var planet_in_arr = ['sun', 'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
@@ -89,7 +81,7 @@ $(document).ready(function () {
 				}
 			}
 
-			if ($('.' + planet).hasClass(planet + '_focus')) {
+			if ($('#' + planet).hasClass(planet + '_focus')) {
 
 				$solar_system.removeClass('solar_system-focus');
 				$orbit_line_wrap.removeClass('orbit-line_wrap-out');
@@ -103,7 +95,7 @@ $(document).ready(function () {
 				$body.removeClass('space_map-move');
 				$('.' + planet + '_space').removeClass('planet-space-front');
 				$('.' + planet + '_orbit').removeClass('planet-orbit-focus');
-				$('.' + planet).removeClass(planet + '_focus');
+				$('#' + planet).removeClass(planet + '_focus');
 
 				$.each(space_arr, function (i, space) {
 					$(space).removeClass('planet-space-out-hide');
@@ -131,7 +123,7 @@ $(document).ready(function () {
 					$('.' + planet + '_space').addClass('planet-space-front');
 				}, 2000);
 
-				$('.' + planet).addClass(planet + '_focus');
+				$('#' + planet).addClass(planet + '_focus');
 
 				animationIn();
 
